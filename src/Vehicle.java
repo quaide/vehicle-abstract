@@ -1,15 +1,15 @@
 public abstract class Vehicle {
     int milesPerGallon;
     int fuelTankCapacity;
-    protected double currentFuelLevel;
+    double currentFuelLevel;
 
-    public  void drive(int distance) {
+    void drive(int distance) {
         System.out.println("Driving " + distance + " miles!");
-        currentFuelLevel = currentFuelLevel - distance;
+        currentFuelLevel = currentFuelLevel - ((double) distance / milesPerGallon);
     }
-    public  void refuel() {
+    void refuel() {
         System.out.println("Gassing up!");
-        currentFuelLevel = fuelTankCapacity*milesPerGallon;
+        currentFuelLevel = fuelTankCapacity;
     }
 
     public abstract String honk();

@@ -19,5 +19,7 @@ public class Main {
         System.out.println(currentTank);
         double currentTank2 = F150.currentFuelLevel;
         System.out.println(currentTank2);
+
+
     }
 }
